@@ -1,0 +1,215 @@
+.blog-hero
+  height: 60vh
+  background:
+    image: url('../images/blog-heroImage.jpg')
+    position: bottom center
+    size: cover
+  margin-top: -170px
+
+.blog-intro
+  padding: 75px 0px
+  text-align: center
+
+  h3
+    font:
+      family: 'Merriweather', serif
+      weight: 700
+    text-transform: none
+
+  .blog-underline
+    height: 3px
+    margin: 20px auto
+    width: 55%
+    background: $ocean
+  p
+    font-size: 14px
+    text-align: left
+    line-height: 23px
+
+.blog-overview
+  position: relative
+  background: $background-light
+  width: 100%
+
+.blog-title
+  text-align: center
+  padding: 50px 0 35px
+  h4
+    font:
+      family: 'Merriweather', serif
+      weight: 700
+      size: 16px
+
+  .ion-chevron-down
+    color: $ocean
+    font-size: 18px
+
+.blog-subscribe
+  text-align: center
+  margin-bottom: 50px
+
+  h3
+    margin-top: 70px
+  p
+    text-align: left
+    font-size: 14px
+
+  .blog-underline
+    height: 3px
+    margin: 10px auto 30px
+    width: 210px
+    background: $ocean
+
+
+
+
+
+
+
+/// Individual posts
+
+.blogPost
+  margin-bottom: 50px
+
+.blogPost-hero
+  position: relative
+  padding: 20px
+  height: 412px
+  background:
+    size: cover
+    position: center center
+  background-blend-mode: multiply
+  color: white
+  overflow: hidden
+
+  &:hover .blogPost-contentMain
+    transform: translateY(-200px)
+
+  &:hover .blogPost-contentExtend
+    transform: translateY(-240px)
+  &:hover .blogPost-button
+    transform: translateY(-200px)
+  &:hover .blogPost-gradient
+    opacity: .7
+
+.blogPost-gradient
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  opacity: 0
+  background: url('../images/OceanGradientTransparent.png')
+  transition: all .6s ease-in-out
+
+
+.blogPost-content
+  height: 412px
+  width: 100%
+
+.blogPost-contentExtend
+  max-height: 206px
+  position: absolute !important
+  width: 80%
+  top: 412px
+  transition: all .5s ease-in-out
+
+  p
+    font:
+      size: 14px
+      weight: 400
+
+.blogPost-contentMain
+  position: absolute
+  bottom: 50px
+  display: table
+  transition: all .5s ease-in-out
+
+.blogPost-category
+  font:
+    family: 'Merriweather', serif
+    weight: 400
+    size: 14px
+    style: italic
+  opacity: .5
+  margin-bottom: 5px
+
+.blogPost-title
+  display: inline-block
+  margin: 0
+  border-bottom: 3px solid $ocean
+  font:
+    family: 'Merriweather', serif
+    weight: 700
+    size: 36px
+  padding:
+    bottom: 5px
+  text-transform: none
+  letter-spacing: 1px
+  color: white
+  transition: all .3s ease-in-out
+
+  &:hover
+    border-bottom: 3px solid $ocean-dark
+  &:visited, &:active
+    color: white
+
+.blogPost-underscore
+  display: table-caption
+  caption-side: bottom
+  margin: 5px 0 0 0
+  line-height: 1.3
+
+.blogPost-button
+  position: absolute
+  bottom: -200px
+  left: 0
+  width: 100%
+
+  text-decoration: none !important
+  text-align: center
+  border: none
+  border-bottom: 3px solid transparent
+  background: $light-grey
+  padding: 12px
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out
+  outline: none
+
+
+  .read-more
+    text-decoration: none
+    color: white
+    text-transform: uppercase
+    font:
+      weight: 600
+
+  .ion-chevron-right
+    display: inline-block
+    color: $ocean
+    margin-left: 5px
+    font-size: 13px
+    transition: all .2s
+
+.blogPost-metadata
+  margin-top: 5px
+  margin-right: 5px
+  text-align: right
+  font:
+    weight: 400
+    style: italic
+  letter-spacing: .2px
+  color: $muted-text
+
+  i
+    color: $muted-text2
+
+
+@media (max-width: 767px)
+  .blog-hero
+    height: 50vh
+
+  .blogPost-content
+    padding: 0
+
+  .blogPost-contentExtend
+    width: 100%

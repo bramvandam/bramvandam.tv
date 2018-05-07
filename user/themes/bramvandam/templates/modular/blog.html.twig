@@ -1,0 +1,52 @@
+    {% set collection = page.collection() %}
+    {% set base_url = page.url %}
+    {% set feed_url = base_url %}
+
+    {% if base_url == '/' %}
+    {% set base_url = '' %}
+    {% endif %}
+
+    {% if base_url == base_url_relative %}
+    {% set feed_url = base_url~'/'~page.slug %}
+    {% endif  %}
+
+    {% block content %}
+<div class="blog-hero"></div>
+
+<section class="blog-intro">
+  <div class="container">
+    <div class="blog-introWrap col-md-8 col-md-offset-2">
+      <h3>{{ page.header.introTitle }}</h3>
+      <div class="blog-underline"></div>
+      {{ page.content }}
+    </div>
+  </div>
+</section>
+
+<section class="blog-overview">
+
+    <div class="blog-title">
+      <h4>Nieuwste Posts</h4>
+      <span class="ion-chevron-down"></span>
+    </div>
+
+      {% for child in collection %}
+        {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
+      {% endfor %}
+
+      {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        {% include 'partials/pagination.html.twig' with {'pagination':collection.params.pagination} %}
+      {% endif %}
+
+
+</section>
+<!-- <section class="blog-subscribe">
+  <div class="container">
+    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+      <h3>Keep me posted!</h3>
+      <div class="blog-underline"></div>
+      <p>Wil je geen blogpost missen? Schrijf je hieronder in en krijg een update als ik een nieuw artikel heb geschreven. En <strong>alleen</strong> als ik een nieuw artikel heb geschreven. <strong>Geen spam</strong>. Pinky promise!</p>
+    </div>
+  </div>
+</section> -->
+    {% endblock %}

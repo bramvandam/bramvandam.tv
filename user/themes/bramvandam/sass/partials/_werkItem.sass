@@ -1,0 +1,611 @@
+.werkItem-thumb
+  position: relative
+  width: 100%
+  padding-top: 146%
+  background-size: cover
+  margin-bottom: 30px
+  cursor: pointer
+  overflow: hidden
+
+  &:hover .werkItem-thumbOverlay
+    opacity: 1
+
+
+.werkItem-thumbOverlay
+  background:
+    image: url('/user/themes/bramvandam/images/bw-tilesTransparent.png')
+    blend-mode: multiply
+    color: rgba(0,0,0,0.3)
+  position: absolute
+  top: 0
+  opacity: 0
+  height: 100%
+  width: 100%
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  transition: all .3s
+
+.werkItem-title
+  display: inline-block
+  color: white
+  padding:
+    top: 0px
+    bottom: 5px
+  margin-bottom: 50px
+  border-bottom: 3px solid $ocean
+  font-size: 20px
+
+
+
+/// FOCUS! \\\\
+
+.werkItemFocus-content
+  margin-bottom: 60px
+  padding-bottom: 60px
+
+.werkItemFocus-overlay
+  position: absolute
+  top: 0
+  left: 0
+  min-width: 100%
+  min-height: 100%
+  height: auto
+
+  background-color: $light-grey
+  background-image: url('/user/themes/bramvandam/images/bw-tilesTransparentDark.png')
+  background-position: top left
+  background-repeat: repeat
+
+  z-index: 999
+  overflow: visible
+
+
+.werkItemFocus-hero
+  position: relative
+  width: 100%
+  height: 30vh
+  min-height: 400px
+  margin-top: 0px
+  background:
+    size: cover
+    repeat: none
+  background-position: bottom center
+  border-bottom: 3px solid $ocean-darkest
+  overflow: hidden
+
+  &:hover .werkItemFocus-heroOverlayVideo
+    opacity: .1
+    cursor: pointer
+  &:hover .werkItemFocus-herOverlayText
+    opacity: 1
+    cursor: pointer
+    transform:  translateY(0px)
+
+.werkItemFocus-heroVideo
+  position: absolute
+  bottom: -10%
+
+  min-height: 100%
+  max-height: 300%
+  min-width: 100%
+  max-width: 120%
+
+
+.werkItemFocus-heroOverlay, .werkItemFocus-heroOverlayVideo
+  position: absolute
+  width: 100%
+  height: 100%
+  opacity: .5
+  transition: .3s all
+
+  background: url('/user/themes/bramvandam/images/bw-tilesTransparentDark30.png')
+
+.werkItemFocus-herOverlayText
+  position: relative
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  opacity: 0
+  transform: translateY(10px)
+
+  transition: .3s all
+  transition: .3s transform cubic-bezier(0, 0, 0, 1.5)
+
+
+  h5
+    font:
+      family: 'Merriweather'
+      size: 18px
+
+    padding-bottom: 4px
+    border-bottom: 3px solid $ocean
+
+    display: flex
+    color: white
+
+.werkItemFocus-heroOverlayGradient
+  position: absolute
+  width: 100%
+  height: 100%
+  opacity: 1
+  background: url('../images/BWGradientTransparent.png')
+  background-repeat: none
+  background-size: cover
+  background-blend-mode: multiply
+  transform: rotate(180deg)
+
+
+
+.werkItemFocus-main
+  padding: 50px
+  display: none
+
+.werkItemFocus-thumb
+  width: 100%
+  padding-top: 146%
+  background-size: cover
+  position: relative
+  margin:
+    top: -70%
+    bottom: 5px
+  overflow: hidden
+
+.werkItemFocus-thumbOverlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+
+  transition: .3s all
+
+  &:hover
+    background-color: rgba(0,0,0,0.5)
+
+
+
+  &:hover .werkItemFocus-thumbOverlayBackground
+    opacity: 1
+    cursor: pointer
+
+  &:hover .werkItemFocus-PlayButton
+    opacity: 1
+    transform: rotate(0deg)
+    cursor: pointer
+
+  &:hover .werkItemFocus-WatchTag
+    transform: translateY(50px)
+
+.werkItemFocus-thumbOverlayBackground
+  background-size: cover
+  background: url('../images/bw-tilesTransparentDark30.png')
+  opacity: 0
+  transition: .3s all
+
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+.werkItemFocus-PlayButton
+  background-color: $ocean-dark
+  height: 50px
+  width: 50px
+  border-radius: 50px
+  position: relative
+  opacity: 0
+
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  transform: rotate(-30deg)
+
+  transition: .3s all
+  transition-timing-function: cubic-bezier(0, 0, 0, 1.60)
+
+  span
+    color: white
+    font-size: 26px
+    padding:
+      top: 1px
+      left: 4px
+
+.werkItemFocus-WatchTag
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0,0,0,0.6)
+  border-bottom: solid 2px $ocean-darker
+  padding: 10px
+  text-align: center
+
+  text-transform: uppercase
+  color: white
+  font:
+    weight: 400
+    size: 18px
+
+  transition: transform .2s ease-in-out
+
+  span
+    margin-right: 10px
+
+  .ion-ios-play
+    color: $ocean
+
+
+
+
+
+
+
+
+
+
+.werkItemFocus-header
+  margin-top: 30px
+
+
+.werkItemFocus-title
+    padding: 0px
+    display: inline-block
+    color: white
+    font-family: 'Merriweather', serif
+    line-height: 0
+    padding-bottom: 22px
+    border-bottom: 3px solid $ocean
+
+.werkItemFocus-description
+  color: white
+  margin-bottom: 20px
+
+  em
+    color: $muted-text2
+    font-weight: 400
+
+
+.werkItemFocus-rating
+  display: flex
+  float: right
+
+.jq-star
+  margin:
+    top: 10px
+    left: 3px
+
+.werkItemFocus-info
+  span
+    color: $ocean
+    height: 30px
+    width: 30px
+    font-size: 24px
+    position: relative
+    top: 3px
+    margin: 0px 5px
+    padding-right: 5px
+
+.werkItemFocus-infoFunction
+  display: inline-block
+  font-family: 'Merriweather', serif
+  color: $flat-grey
+  padding: 3px
+
+.werkItemFocus-infoGeneral
+  width: 100%
+  border-top: 1px solid $ocean
+  padding: 5px
+  font-size: 13px
+
+  ul
+    list-style: none
+    padding: 0px
+    font-family: 'Merriweather', serif
+    color: $muted-text
+    line-height: 1.7
+
+.werkItemFocus-infoSummary
+  color: $muted-text2
+  font-size: 14px
+  font-family: 'Merriweather', serif
+  font-style: italic
+
+.werkItemFocus-Brand
+  border-top: 1px solid $ocean
+  margin-top: 0px
+  padding-top: 15px
+  -webkit-backface-visibility: hidden
+
+  img
+    opacity: 0.3
+    transition: .3s all
+    height: 60px
+    margin-right: 10px
+    -webkit-backface-visibility: hidden
+
+    &:hover
+      opacity: 0.8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.werkItemFocus-BackButton
+  position: fixed
+  bottom: -1px
+  height: 60px
+  background:
+    color: $ocean
+  box-shadow: 0px -7px 35px 2px rgba(0,0,0,0.3)
+
+
+
+  text-transform: uppercase
+  width: 100%
+  font-size: 18px
+
+  display: none
+  z-index: 1001
+
+
+.navbar-accent-work
+  position: absolute
+  top: 0
+  height: 15px
+  width: 100%
+  background: url('../images/bw-tiles.jpg') bottom center
+  z-index: 2000
+
+
+.werkItemFocus-play
+  display: none
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 15000
+
+
+
+
+.werkItemFocus-playOverlay
+  width: 100%
+  height: 100%
+  opacity: 0.9
+  background-color: black
+  z-index: 15000
+
+.werkItemFocus-playItemWrapper
+  position: absolute
+
+  top: 20vh
+  left: 0px
+  right: 0px
+  bottom: 0px
+
+  display: flex
+  justify-content: center
+  align-items: flex-start
+
+
+
+
+.werkItemFocus-playItem
+  position: relative
+  width: 85vw
+  max-width: 1000px
+  max-height: 572px
+  height: 48.6vw
+  border: solid 5px $dark-grey
+
+  iframe
+    width: 100%
+    height: 100%
+    z-index: 2002
+
+.werkItemFocus-playItemLink
+  position: relative
+  padding: 35px 50px 50px 50px
+  background-color: white
+
+  text-align: center
+
+  h3
+    display: inline-block
+    padding-bottom: 5px
+
+    border-bottom: 2px solid $ocean
+    margin-bottom: 30px
+  p
+    text-align: left
+    margin-bottom: 40px
+
+
+.werkItemFocus-playBackButton
+  position: absolute
+  top: -5px
+  right: -50px
+  padding: 7px 15px
+  transition: .3s all
+  background: none
+  border: none
+  z-index: 2002
+
+
+
+
+  &:hover
+    cursor: pointer
+    background: none
+    border: none
+
+  &:hover span
+    color: $ocean
+
+  span
+    color: white
+    font-size: 24px
+    transition: .3s all
+
+.werkItemFocus-playBackButton#PlayItemLink
+    position: absolute
+    top: 0px
+    right: 0px
+    border: none
+
+    span.ion-close
+      color: $dark-grey
+
+      &:hover
+        color: $ocean
+
+
+
+
+
+
+
+@media(max-width: 830px)
+  .werkItemFocus-heroVideo
+    display: none
+
+
+
+@media (max-width: 767px)
+  .werkItem-title
+    font-size: 24px
+
+  .werkItemFocus-header
+    text-align: center
+
+  .werkItemFocus-title
+    padding-bottom: 18px
+    border-bottom: 2px solid $ocean
+    font-size: 24px
+    visibility: collapse
+    position: absolute
+
+
+  .werkItemFocus-overlay
+    z-index: 1000
+
+  .werkItemFocus-hero
+    position: relative
+    width: 100%
+    height: 20vh
+    min-height: 450px
+    margin-top: -165px
+    background:
+      size: cover
+      repeat: none
+
+
+
+  .werkItemFocus-header
+    margin-top: 5px
+
+  .werkItemFocus-infoFunction
+    position: relative
+    color: $muted-text2
+    background-color: rgba(0, 0, 0, 0.5)
+    position: relative
+    width: 100%
+    top: -15px
+    padding:
+      top: 5px
+      bottom: 9px
+      left: 5px
+
+    span
+      padding: 5px
+
+  .werkItemFocus-infoGeneral
+    margin-top: -25px
+
+  .werkItemFocus-playBackButton
+    position: absolute
+    top: -5px
+    right: -50px
+    padding: 7px 15px
+    transition: .3s all
+
+    span
+      font-size: 36px
+
+  .werkItemFocus-Brand
+    border-top: 1px solid $objective-grey
+
+    img
+      position: relative
+      height: 75px
+
+  .werkItemFocus-playItemLink
+    position: absolute
+    top: -20vh
+    bottom: 0
+    left: 0
+    right: 0
+    padding-top: 75px
+    overflow: hidden
+
+  .werkItemFocus-playItem
+    position: absolute
+    width: 95vw
+    height: 53.7vw
+
+  .werkItemFocus-playBackButton
+    position: absolute
+    top: auto
+    bottom: -125px
+    left: 40%
+    right: auto
+
+    border-radius: 1000px
+    padding: 10px 18px
+    border: 3px solid white
+
+    &:hover
+      border: 3px solid $ocean
+
+    span
+      font-size: 24px
+
+  .werkItemFocus-playBackButton#PlayItemLink
+    position: absolute
+    top: 20px
+    right: -110px

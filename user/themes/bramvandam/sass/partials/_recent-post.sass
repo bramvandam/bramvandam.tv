@@ -1,0 +1,126 @@
+.recent-post-wrapper
+  width: 100%
+  position: relative
+  min-height: 500px
+  margin-bottom: 100px
+  padding: 50px 0px
+  overflow: hidden
+
+.recent-post-banner
+  img
+    position: absolute
+    top: -50%
+    left: 0
+    width: 100%
+    z-index: -1
+
+.recent-post-text
+  h4
+    color: white
+    display: table-caption
+    margin-top: 5px
+    caption-side: bottom
+    line-height: 1.4
+    font:
+      size: 18px
+.blogItem-wrapper
+  position: relative
+
+
+.blogPost-hero-home
+  position: relative
+  padding: 20px
+  min-height: 600px
+  background:
+    size: cover
+    position: center center
+  background-blend-mode: multiply
+  color: white
+  overflow: hidden
+  display: flex
+  align-items: center
+
+.blogPost-gradient-home
+  position: absolute
+  width: 100%
+  height: 100%
+  bottom: -250px
+  left: 0
+  background: url('../images/OceanGradientTransparent.png')
+  opacity: .7
+
+.blogPost-contentExtend-home
+  max-height: 206px
+  width: 80%
+  margin-bottom: 40px
+  p
+    font:
+      size: 14px
+      weight: 400
+
+.blogPost-contentMain-home
+  bottom: 50px
+  display: table
+  transition: all .5s ease-in-out
+  margin-bottom: 20px
+
+.blogPost-button-home
+  text-decoration: none !important
+  text-align: center
+  border: none
+  border-bottom: 3px solid transparent
+  background: $light-grey
+  padding: 18px 36px
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out
+  outline: none
+
+  .read-more
+    font-weight: 600
+    text-transform: uppercase
+    -webkit-font-smoothing: antialiased
+
+  .ion-chevron-right
+    display: inline-block
+    color: $ocean
+    margin-left: 5px
+    font-size: 13px
+    transition: all .2s
+
+  #right2
+    margin-left: -20px
+    opacity: 0
+
+  &:hover .ion-chevron-right
+    transform: translateX(10px)
+  &:hover #right1
+    opacity: 0
+  &:hover #right2
+    opacity: 1
+
+
+.blogPost-metadata-home
+  position: absolute
+  bottom: 10px
+  right: 10px
+  margin-top: 5px
+  margin-right: 5px
+  text-align: right
+  font:
+    weight: 400
+    style: italic
+  letter-spacing: .2px
+  color: $muted-text2
+
+  i
+    color: $muted-text
+
+@media (max-width: 415px)
+  .blogPost-contentExtend-home
+    margin-bottom: 110px
+    width: 100%
+
+  .blogPost-hero-home
+    height: 800px
+
+  .blogPost-gradient-home
+    bottom: -450px

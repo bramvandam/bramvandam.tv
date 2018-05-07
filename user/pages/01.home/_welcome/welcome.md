@@ -1,0 +1,3 @@
+### Hello! Nice to meet you...
+
+Ik ben een Nederlandse film en documentaire editor. En als het goed is... heb je niet in de gaten dat ik mijn werk goed gedaan heb. Een goede editor zorgt ervoor dat jij het technische aspect van een film vergeet en dat je helemaal op gaat in het verhaal. Hij repareert wat gebroken is, voegt ritme toe en verandert losse beelden in een vloeiend verhaal. Maar, zodra hij een foutje maakt is de magie verloren. De goochelaar is ontmaskerd en de truc is doorzien. En daarmee is het doel van de film, documentaire of videoclip niet gehaald: de kijker meenemen in het verhaal. Dus noem mij maar een filmgoochelaar, een technische klusjesman of een visuele verhalenverteller, maar Bram is prima hoor!

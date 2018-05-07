@@ -1,0 +1,103 @@
+.blogItem-morePosts
+  background: $background-light
+  padding: 20px 0px
+  margin-bottom: 50px
+
+.blogItem-morePostsTitle
+  text-align: center
+  margin: 0
+  padding: 0
+  margin-bottom: 15px
+  h5
+    font:
+      family: 'Merriweather', serif
+      size: 16px
+  .ion-chevron-down
+    color: $ocean
+
+/// Individual posts
+.morePost
+  margin-bottom: 25px
+
+
+.morePost-hero
+  position: relative
+  padding: 30px 30px 30px 0px
+  height: 412px
+  background:
+    size: cover
+    position: center center
+  background-blend-mode: multiply
+  color: white
+  overflow: hidden
+
+  &:hover .morePost-gradient
+    opacity: .4
+
+
+.morePost-gradient
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  opacity: 0
+  background: url('../images/OceanGradientTransparent.png')
+  transition: all .6s ease-in-out
+
+.morePost-content
+  height: 412px
+  width: 100%
+
+.morePost-contentMain
+  position: absolute
+  top: -10px
+  display: table
+
+.morePost-button
+  position: absolute
+  bottom: 0px
+  left: 0
+  width: 100%
+
+  text-decoration: none !important
+  text-align: center
+  border: none
+  border-bottom: 3px solid transparent
+  background: $light-grey
+  padding: 12px
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out
+  outline: none
+
+
+
+
+  &:hover .ion-chevron-right
+    transform: translateX(10px)
+  &:hover #right1
+    opacity: 0
+  &:hover #right2
+    opacity: 1
+
+
+  .read-more
+    text-decoration: none
+    color: white
+    text-transform: uppercase
+    font:
+      weight: 600
+
+  .ion-chevron-right
+    display: inline-block
+    color: $ocean
+    margin-left: 5px
+    font-size: 13px
+    transition: all .2s
+
+  #right2
+    margin-left: -20px
+    opacity: 0
+
+@media (max-width: 767px)
+  .morePost-hero
+    height: 250px

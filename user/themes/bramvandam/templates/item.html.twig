@@ -1,0 +1,81 @@
+{% extends 'partials/base-inverted.html.twig' %}
+
+{% block content %}
+<article class="main-item">
+	<div class="blogItem-hero" style="background-image: url('/user/themes/bramvandam/images/bw-tilesTransparent.png'), url('{{ page.media.images|first.url }}')">
+		<div class="blogItem-heroContent">
+
+			<div class="overlayDarken"></div>
+
+			<div class="blogItem-headerText">
+				<h1 class="blogItem-title">{{ page.title }}</h1><br>
+				<h2 class="blogItem-underscore">{{ page.header.underscore }}</h2>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="blogItem-mainContent">
+			<div class="row">
+
+				<div class="hidden-xs col-sm-3">
+					<div class="blogItem-mainMetadata">
+						<span>{{ page.header.author }}</span> <br>
+						<em>categorie: </em><span>{{ page.header.category }}</span><br>
+						<em>datum: </em><span>{{ page.date|date("d/m/Y") }}</span> <br>
+
+						<em>tags: </em>
+	          {% if page.taxonomy.tag %}
+	               {% for tag in page.taxonomy.tag %}
+	                 <span class="blogItem-tags">{{ tag }}{% if not loop.last %}, {% endif %} </span>
+	               {% endfor %}
+	          {% endif %}<br>
+						<span>Delen:</span><br>
+						<ul>
+							<a class="blogItem-metaSociable" href="http://twitter.com/home?status=Check het artikel: {{ page.title|replace({' ': "%20"}) }} - {{ page.url(true) }}"><li class="ion-social-twitter"></li></a>
+							<a class="blogItem-metaSociable" href="http://reddit.com/submit?url={{ page.url(true) }}&amp;title={{ page.title|replace({' ': "%20"}) }}"><li class="ion-social-reddit"></li></a>
+							<a class="blogItem-metaSociable" href="http://www.facebook.com/share.php?u={{ page.url(true) }}"><li class="ion-social-facebook"></li></a>
+							<a class="blogItem-metaSociable" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url(true) }}&amp;title={{ page.title|replace({' ': "%20"}) }}"><li class="ion-social-linkedin"></li></a>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-9 col-md-8">
+					<div class="blogItem-mainText">{{ content }}</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-md-2 pull-right">
+					<div class="blogItem-mainSociables">
+						<ul>
+							<a class="blogItem-mainSociable" href="http://twitter.com/home?status=Check het artikel: {{ page.title|replace({' ': "%20"}) }} - {{ page.url(true) }}"><li class="ion-social-twitter"></li></a>
+							<a class="blogItem-mainSociable" href="http://reddit.com/submit?url={{ page.url(true) }}&amp;title={{ page.title|replace({' ': "%20"}) }}"><li class="ion-social-reddit"></li></a>
+							<a class="blogItem-mainSociable" href="http://www.facebook.com/share.php?u={{ page.url(true) }}"><li class="ion-social-facebook"></li></a>
+							<a class="blogItem-mainSociable" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url(true) }}&amp;title={{ page.title|replace({' ': "%20"}) }}"><li class="ion-social-linkedin"></li></a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
+{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+<section class="blogItem-morePosts">
+	<div class="container">
+
+			<div class="blogItem-morePostsTitle">
+			    <h5>Meer Lezen</h5>
+					<span class="ion-chevron-down"></span>
+			</div>
+			{% include 'partials/relatedpages.html.twig' %}
+
+	</div>
+</section>
+{% endif %}
+
+
+
+{% endblock %}

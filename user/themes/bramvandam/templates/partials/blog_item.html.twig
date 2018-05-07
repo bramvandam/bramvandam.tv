@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+
+      <article class="blogPost">
+        <div class="blogPost-hero" style="background-image: url('/user/themes/bramvandam/images/bw-tilesTransparent.png'), url('{{ page.media.images|first.url }}')">
+          <div class="row container">
+          <div class="blogPost-gradient"></div>
+            <div class="blogPost-content col-md-12">
+
+              <div class="blogPost-contentMain">
+                <h6 class="blogPost-category">{{ page.header.category }}</h6>
+                <a href="{{ page.url }}"><h3 class="blogPost-title">{{ page.title }}</h3></a>
+                <h4 class="blogPost-underscore">{{ page.header.underscore }}</h4>
+              </div>
+
+                <div class="blogPost-contentExtend hidden-xs hidden-sm hidden-md">{{ page.summary(650) }}</div>
+                <div class="blogPost-contentExtend hidden-xs hidden-sm hidden-lg">{{ page.summary(515) }}</div>
+                <div class="blogPost-contentExtend hidden-xs hidden-md hidden-lg">{{ page.summary(490) }}</div>
+                <div class="blogPost-contentExtend hidden-sm hidden-md hidden-lg">{{ page.summary(400) }}</div>
+
+            </div>
+            <a class="blogPost-button button-chevron-right" href="{{ page.url }}">
+              <span class="read-more">Lees Verder</span>
+              <span id="right1" class="ion-chevron-right"></span>
+              <span id="right2" class="ion-chevron-right"></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="blogPost-metadata">
+          <i>tags: </i>
+          {% if page.taxonomy.tag %}
+               {% for tag in page.taxonomy.tag %}
+                 <span>{{ tag }}{% if not loop.last %}, {% endif %} </span>
+               {% endfor %}
+          {% endif %}
+          <i>datum: </i>
+          <span>{{ page.date|date("d/m/Y") }}</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="div">
+
+</div>

@@ -1,0 +1,42 @@
+.navbar-collapse .menuItem a {
+  color: white !important; }
+  .navbar-collapse .menuItem a:hover {
+    color: white !important; }
+  .navbar-collapse .menuItem a:active {
+    color: white !important; }
+  .navbar-collapse .menuItem a:visited {
+    color: white !important; }
+
+.navbar-brand path {
+  fill: white; }
+
+.navbar-brand:hover path {
+  fill: #353535; }
+
+.navbar-toggle span {
+  color: white; }
+
+.footerSticky .horizontal-rule {
+  background: white; }
+
+.footerSticky .socialIcon {
+  color: white; }
+  .footerSticky .socialIcon:hover {
+    color: #68b3af !important; }
+  .footerSticky .socialIcon:visited {
+    color: white; }
+
+.footerSticky .footer-navigation a {
+  color: white; }
+  .footerSticky .footer-navigation a:hover {
+    color: #68b3af; }
+
+.footerSticky .footer-logo path {
+  fill: white; }
+
+.footerSticky .footer-text {
+  color: white; }
+  .footerSticky .footer-text a {
+    color: white; }
+    .footerSticky .footer-text a:hover {
+      color: #68b3af; }

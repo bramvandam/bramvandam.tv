@@ -1,0 +1,47 @@
+{% for p in page.find('/blog/_blog').children.order('date', 'desc').slice(0, 1) %}
+
+  <article class="blogPost">
+    <div class="blogPost-hero-home" style="background-image: url('/user/themes/bramvandam/images/bw-tilesTransparent.png'), url('{{ p.media.images|first.url }}')">
+      <div class="container">
+        <div class="row">
+        <div class="blogPost-gradient-home"></div>
+          <div class="blogPost-content-home col-xs-12 col-md-10 col-md-offset-1">
+
+            <div class="blogPost-contentMain-home">
+              <h6 class="blogPost-category">{{ p.header.category }}</h6>
+              <a href="{{ page.url }}"><h3 class="blogPost-title">{{ p.title }}</h3></a>
+              <h4 class="blogPost-underscore">{{ p.header.underscore }}</h4>
+            </div>
+
+              <div class="blogPost-contentExtend-home hidden-xs hidden-sm hidden-md">{{ p.summary(650) }}</div>
+              <div class="blogPost-contentExtend-home hidden-xs hidden-sm hidden-lg">{{ p.summary(515) }}</div>
+              <div class="blogPost-contentExtend-home hidden-xs hidden-md hidden-lg">{{ p.summary(490) }}</div>
+              <div class="blogPost-contentExtend-home hidden-sm hidden-md hidden-lg">{{ p.summary(400) }}</div>
+
+              <a class="blogPost-button-home" href="{{ p.url }}">
+                <span class="read-more">Lees Verder</span>
+                <span id="right1" class="ion-chevron-right"></span>
+                <span id="right2" class="ion-chevron-right"></span>
+              </a>
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="blogPost-metadata-home">
+          <i>tags: </i>
+          {% if p.taxonomy.tag %}
+               {% for tag in p.taxonomy.tag %}
+                 <span>{{ tag }}{% if not loop.last %}, {% endif %} </span>
+               {% endfor %}
+          {% endif %}
+          <i>datum: </i>
+          <span>{{ p.date|date("d/m/Y") }}</span>
+        </div>
+
+      </div>
+  </article>
+
+{% endfor %}

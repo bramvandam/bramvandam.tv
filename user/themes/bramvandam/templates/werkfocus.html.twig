@@ -1,0 +1,135 @@
+{% block content %}
+
+<section class="werkItemFocus">
+	<div class="werkItemFocus-content">
+
+
+
+		<div class="werkItemFocus-hero" style="background-image: url('{{ page.media['hero.gif'].url }}'), url('{{ page.media['hero.jpg'].url }}')">
+			<video loop muted autoplay poster="{{ page.media['hero.jpg'].url }}" class="werkItemFocus-heroVideo">
+        <source src="{{ page.media['hero.mp4'].url }}" type="video/mp4">
+    	</video>
+			<div class="werkItemFocus-heroOverlayGradient"></div>
+
+			{% if page.header.videoEmbed %}
+			<a href="#topWindow">
+				<div class="werkItemFocus-heroOverlayVideo"></div>
+				<div class="werkItemFocus-herOverlayText"><h5>bekijk {{ page.header.title }}</h5></div>
+			</a>
+			{% elseif page.header.videoLink %}
+
+			<a href="#topWindow">
+				<div class="werkItemFocus-heroOverlayVideo"></div>
+				<div class="werkItemFocus-herOverlayText"><h5>bekijk {{ page.header.title }}</h5></div>
+			</a>
+
+			{% else %}
+
+			<div class="werkItemFocus-heroOverlay"></div>
+
+			{% endif %}
+
+
+
+		</div>
+		<div class="navbar-accent-work"></div>
+		<div class="WerkItemFocus-container container">
+			<div class="row">
+
+
+				<div class="col-xs-12 col-sm-4">
+
+					<div class="werkItemFocus-thumb" style="background-image: url('{{ page.media['thumb.jpg'].url }}')">
+						{% if page.header.videoEmbed %}
+
+						<a href="#topWindow">
+							<div class="werkItemFocus-thumbOverlay">
+									<div class="werkItemFocus-thumbOverlayBackground"></div>
+									<div class="werkItemFocus-PlayButton"><span class="ion-play"></span></div>
+									<div class="werkItemFocus-WatchTag"><span class="ion-ios-play"></span><span>Kijken</span></div>
+							</div>
+						</a>
+
+						{% elseif page.header.videoLink %}
+
+						<a href="#topWindow">
+							<div class="werkItemFocus-thumbOverlay">
+									<div class="werkItemFocus-thumbOverlayBackground"></div>
+									<div class="werkItemFocus-PlayButton"><span class="ion-play"></span></div>
+									<div class="werkItemFocus-WatchTag"><span class="ion-ios-play"></span><span>Kijken</span></div>
+							</div>
+						</a>
+
+						{% endif %}
+					</div>
+
+					<div class="werkItemFocus-info">
+						<h5 class="werkItemFocus-infoFunction"><span class="{{ page.header.icon }}"></span>{{ page.header.function }}</h5>
+
+						<div class="werkItemFocus-infoGeneral">
+							<h6 class="werkItemFocus-infoSummary">{{ page.header.type }} - {{page.header.genre }} - {{page.header.duration }}</h6>
+							<ul class="werkItemFocus-infoCrew">
+								<li><strong>{{page.header.credit1Role}}:</strong> {{page.header.credit1Person}}</li>
+								<li><strong>{{page.header.credit2Role}}:</strong> {{page.header.credit2Person}}</li>
+								<li><strong>{{page.header.credit3Role}}:</strong> {{page.header.credit3Person}}</li>
+								<li><strong>{{page.header.credit4Role}}:</strong> {{page.header.credit4Person}}</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-8 pull-right">
+					<div class="werkItemFocus-header">
+						<h1 class="werkItemFocus-title">{{ page.title }}</h1>
+						<div class="werkItemFocus-rating">{{ stars(page.route) }}</div>
+					</div>
+
+					<div class="werkItemFocus-description">
+						<p>{{ page.content }}</p>
+					</div>
+				</div>
+
+				{% if page.taxonomy.brand %}
+				<div class="col-xs-12 col-sm-4 pull-left">
+					<div class="werkItemFocus-Brand">
+						 {% for brand in page.taxonomy.brand %}
+							 <img src="/user/themes/bramvandam/images/brands/{{ brand }}.png" alt="{{ brand }}">{% if not loop.last %}, {% endif %}
+						 {% endfor %}
+					</div>
+				</div>
+				{% endif %}
+
+
+
+
+
+			</div>
+		</div>
+</section>
+{% if page.header.video %}
+<div class="werkItemFocus-play">
+	<div class="werkItemFocus-playOverlay"></div>
+	<div class="werkItemFocus-playItemWrapper">
+		<div class="werkItemFocus-playItem">
+			<iframe id="video-iframe" src="{{ page.header.videoEmbed }}" frameborder="0" min-width="431px" allowfullscreen></iframe>
+			<div class="werkItemFocus-playBackButton"><span class="ion-close"></span></div>
+		</div>
+	</div>
+</div>
+
+{% elseif page.header.videoLink %}
+<div class="werkItemFocus-play">
+	<div class="werkItemFocus-playOverlay"></div>
+	<div class="werkItemFocus-playItemWrapper">
+		<div class="werkItemFocus-playItemLink col-xs-12 col-sm-8 col-md-6">
+			<h3>{{page.header.videoLinkTitle}}</h3>
+			<p>{{page.header.videoLinkTitle}} ondersteunt geen embedded video. Als je toch {{page.header.title}} wilt bekijken dan moet je deze website verlaten.</p>
+			<a class="werkItemFocus-playItemLinkButton button-chevron-right" href="{{ page.header.videoLink}}" alt="{{page.header.title}} op {{page.header.videoLinkTitle}}" target="_blank">Ga naar de video <span class="ion-chevron-right" id="right1"></span><span class="ion-chevron-right" id="right2"></span></a>
+			<div class="werkItemFocus-playBackButton" id="PlayItemLink"><span class="ion-close"></span></div>
+		</div>
+	</div>
+</div>
+{% endif %}
+
+{% endblock %}

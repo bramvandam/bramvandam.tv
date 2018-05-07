@@ -1,0 +1,163 @@
+.navbar-static-top
+  transition: all .3s ease-in-out
+
+.navbar-static-top-hide
+  z-index: 1
+
+.navbar-static-top-show
+  z-index: 1000
+
+.navbar-default
+  background: none
+  border: none
+  height: auto
+
+.navbar-accent
+  height: 15px
+  width: 100%
+  background: url('../images/bw-tiles.jpg') bottom center
+
+.navbarContent-wrapper
+  margin: 35px auto
+
+
+.nav
+  margin-top: 7px
+  text-align: right
+
+.navbar-header
+  position: relative
+
+
+
+.navbar-collapse
+
+  .menuItem a
+    font:
+      size: 18px
+      weight: 600
+    color: $light-grey !important
+    padding: 3px 0px
+    margin: 12px 15px
+
+    border-top: 3px solid transparent
+    transition: all .3s
+
+    &:hover
+      color: $light-grey !important
+      border-top: 3px solid $ocean
+      transform: translateY(4px)
+      background: none
+
+  .menuItem.active a
+    color: $light-grey !important
+    border-top: 3px solid $ocean
+    background: none
+
+    &:hover
+      background: none
+      border-top: 3px solid $ocean-dark
+      transform: translateY(0px)
+
+
+.navbar-brand
+  line-height: 1
+  height: auto
+  padding: 0px
+
+  svg
+    height: 70px
+    width: 70px
+  path
+    fill: $light-grey
+    transition: all .3s
+
+  &:hover path
+    fill: $ocean
+
+
+@media(max-width: 1240px)
+  .navbarContent-wrapper
+    position: relative
+    margin: 35px
+
+
+@media (max-width: 767px)
+  .mainContent
+    background-color: $dark-grey
+    transition: all .3s
+
+  .mainContentShow
+    height: 170px
+
+  .mainContentHide
+    height: 0px
+
+
+  .navbar-toggle
+    border: 0px solid $light-grey
+    border-radius: 3px
+    border-color: none
+    padding: 6px 14px
+    margin-top: 10px
+    color: $light-grey
+
+    &:hover
+      background: $light-grey !important
+
+    &:hover .ion-navicon
+      color: white
+
+    transition: all .1s ease-in-out
+
+    .ion-navicon
+      font-size: 36px
+      line-height: 10px
+      padding: 0px
+      margin: 0px
+
+
+  .navbarShow
+    background: $light-grey !important
+    color: white
+
+    transition: all .1s ease-in-out
+
+  .navbar-collapse
+    border: 0px solid $objective-grey
+    background-color: none
+    border-radius: 3px 0px 3px 3px
+    position: absolute
+    box-shadow: none
+    top: -217px
+    left: -50px
+    right: -50px
+    transition: all .3s
+
+
+    .menuItem
+      text-align: center
+      a
+        font-weight: 400
+        color: white !important
+        padding: 15px 0px
+        margin: 0px 15px
+        border-top: none
+        transition: all .3s
+
+        &:hover
+          color: white !important
+          border-top: none
+          transform: none
+          background: $darker-grey !important
+
+    .menuItem.active a
+      color: white !important
+      border-top: none
+      background: none
+
+      &:hover
+        color: white !important
+        border-top: none
+        transform: none
+        background: $darker-grey

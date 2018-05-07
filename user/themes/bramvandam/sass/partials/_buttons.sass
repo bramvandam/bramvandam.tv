@@ -1,0 +1,193 @@
+.button-standard
+  position: relative
+  border: none
+  border-bottom: 3px solid transparent
+  background: $dark-grey
+  padding: 18px 36px
+  margin: 20px auto 0px auto
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out
+  outline: none
+
+  font-size: 14px
+  font-weight: 600
+  text-transform: uppercase
+  -webkit-font-smoothing: antialiased
+
+  transition: all .3s ease-in-out
+
+  &:hover
+    background: $light-grey
+
+
+// .button-standard ::after
+//   content: ""
+//   position: absolute
+//   left: 0
+//   right: 0
+//   top: 0
+//   bottom: 0
+//
+//   background: $ocean
+
+
+
+.button-outline
+  position: relative
+  overflow: hidden
+  background: none
+  border: 2px solid $light-grey
+  color: $light-grey
+
+  &:hover .button-outlineBackground
+    transform: translateY(-61px)
+
+  &:hover .button-outlineText
+    color: white
+
+  &:active
+    border: 2px solid $dark-grey
+
+  &:active .button-outlineBackground
+    background: $dark-grey
+
+.button-outlineBackground
+  position: relative
+  display: block
+  width: 100%
+  height: 120%
+  background: $light-grey !important
+  -webkit-backface-visibility: hidden
+  -webkit-transform: translateZ(0)
+  z-index: 0
+
+  transition: all .2s ease-in-out
+
+.button-outlineText
+  position: relative
+  height: 100%
+  display: inline-block
+  padding: 18px 36px
+  background: none
+  font-size: 14px
+  font-weight: 600
+  text-transform: uppercase
+  -webkit-font-smoothing: antialiased
+  -webkit-backface-visibility: hidden
+  -webkit-transform: translateZ(0)
+  z-index: 1
+  transition: color .1s ease-in-out
+  transition-delay: .1s
+
+  span
+    margin: 0px
+    padding: 0px
+    line-height: 0
+
+
+
+
+
+
+.button-chevron-right
+  text-decoration: none
+  text-align: center
+  border: none
+  margin: 0px
+  border-bottom: 3px solid transparent
+  background: $light-grey
+  padding: 12px 22px 12px 18px
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out
+  outline: none
+
+  color: white
+  text-transform: uppercase
+
+  a
+    color: white
+
+  .ion-chevron-right
+    display: inline-block
+    color: $ocean
+    margin-left: 5px
+    font-size: 12px
+    transition: all .2s
+
+  &:hover
+    color: white
+
+  &:hover .ion-chevron-right
+
+  &:hover #right1
+    opacity: 1
+    transform: translateX(17px)
+  &:hover #right2
+    opacity: 0
+    transform: translateX(20px)
+
+  #right1
+    opacity: 0
+    transform: translateX(10px)
+    margin-left: -10px
+
+  #right2
+    opacity: 1
+    transform: translateX(7px)
+    margin-left: 0px
+
+
+
+
+
+
+
+
+
+.button-chevron-left
+  text-decoration: none
+  text-align: center
+  border: none
+  margin: 0
+  border-bottom: 3px solid transparent
+  background: $light-grey
+  padding: 12px 18px 12px 8px
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out
+  outline: none
+
+  color: white
+  text-transform: uppercase
+
+  span
+    margin-right: 5px
+    position: relative
+    top: 2px
+
+  .ion-chevron-left
+    transition: .5s all ease-in-out
+    display: inline-block
+    margin-right: 10px
+    font-size: 14px
+    transition: all .2s
+    color: $dark-grey
+
+
+  &:hover .ion-chevron-left
+
+  &:hover #left1
+    opacity: 0
+    transform: translateX(-10px)
+  &:hover #left2
+    opacity: 1
+    transform: translateX(0px)
+
+  #left1
+    opacity: 1
+    margin-left: 0px
+    transform: translateX(10px)
+
+  #left2
+    opacity: 0
+    margin-left: -10px
+    transform: translateX(10px)
+
+
+// Hello! hello 2

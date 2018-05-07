@@ -1,0 +1,15 @@
+{% for field in form.fields %}
+{% block field %}
+    {% if field.name != 'g-recaptcha-response' %}
+    <div class="ContactThankyou-entryField">
+      {% block field_label %}
+        <p class="ContactThankyou-entryLabel">{{ field.label }}</p>
+      {% endblock %}
+
+      {% block field_value %}
+        <p class="ContactThankyou-entryValue">{{ string(form.value(field.name)|e)|nl2br }}</p>
+      {% endblock %}
+    </div>
+    {% endif %}
+{% endblock %}
+{% endfor %}

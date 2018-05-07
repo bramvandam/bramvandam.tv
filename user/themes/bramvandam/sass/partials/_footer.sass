@@ -1,0 +1,91 @@
+.footer
+  text-align: center
+  margin-top: 50px
+
+
+.horizontal-rule
+  margin:
+    top: 20px
+  padding: 0px
+  height: 1px
+  width: 100%
+  line-height: 1
+  background: $flat-grey
+
+.socialIcon
+  display: inline-block
+  color: $muted-grey
+  font-size: 22px
+  padding: 7px
+  transition: all .3s ease-in-out
+
+  &:hover
+    color: $light-grey !important
+
+  &:visited
+    color: $muted-grey
+
+.footer-navigation
+  list-style: none
+  padding: 0
+  margin:
+    top: 30px
+    bottom: 40px
+
+  li
+    display: inline-block
+    margin:
+      left: 10px
+      right: 10px
+  a
+    color: $objective-grey
+    font:
+      size: 16px
+      weight: 600
+    text-decoration: none
+    transition: all .2s
+    &:hover
+      opacity: 1
+      color: $ocean
+
+.footer-logo
+  display: inline-block
+  height: 30px
+  width: 30px
+  margin-right: 10px
+  path
+    fill: $objective-grey
+
+.footer-text
+  display: inline-block
+  text-align: left
+  color: $flat-grey
+  margin-bottom: 30px
+
+  span
+    font-size: 14px
+
+  a
+    font-weight: 700
+    font-size: 14px
+    color: $flat-grey
+    text-decoration: none
+    transition: all .3s ease-in-out
+
+    &:hover
+      color: $ocean
+
+.footerSticky
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+
+@media (max-width: 575px)
+  .footer
+    margin-top: 70px
+  .socialIcons
+    margin-top: -22px
+
+  .horizontal-rule
+    margin-top: 0px

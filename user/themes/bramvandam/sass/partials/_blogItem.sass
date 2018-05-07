@@ -1,0 +1,136 @@
+.blogItem-hero
+  position: relative
+  margin-top: -165px
+  height: 750px
+  max-height: 80vh
+  background:
+    size: cover
+    position: center center
+  background-blend-mode: multiply
+  color: white
+  text-align: center
+
+.blogItem-heroContent
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  display: flex
+  align-items: center
+
+.overlayDarken
+  position: absolute
+  bottom: 0
+  top: 0
+  left: 0
+  right: 0
+  background: rgba(0,0,0,0.4)
+  z-index: 1
+
+.blogItem-headerText
+  display: table
+  margin: 0 auto
+  z-index: 2
+
+.blogItem-title
+  display: inline-block
+  border-bottom: 3px solid $ocean
+  font:
+    family: 'Merriweather', serif
+    weight: 700
+    size: 36px
+  color: white
+  padding-bottom: 5px
+  letter-spacing: 1px
+
+.blogItem-underscore
+  display: table-caption
+  margin-top: 5px
+  caption-side: bottom
+  line-height: 1.4
+  font:
+    size: 18px
+
+.blogItem-mainContent
+  margin: 30px auto 20px
+
+.blogItem-mainMetadata
+  border-right: 3px solid $ocean
+  padding: 10px 20px
+  text-align: right
+  margin-top: -10px
+
+  color: $muted-text
+  font:
+    size: 18px
+    weight: 600
+  text-transform: uppercase
+
+  span
+    font-size: 18px
+
+  em
+    color: $muted-text2
+    font:
+      style: normal
+      size: 18px
+
+  ul
+    display: inline-block
+    margin: 5px auto
+    padding: 0px
+    border-top: 2px solid $background-light
+    list-style: none
+
+  .blogItem-tags
+    font:
+      style: italic
+      weight: 400
+      size: 14px
+    text-transform: none
+
+.blogItem-metaSociable
+  display: inline-block
+  text-decoration: none
+  color: $muted-text
+  margin:
+    top: 5px
+    left: 10px
+  transition: all .3s
+  &:hover, &:focus
+    color: $ocean
+    outline: none
+  &:active, &:visited
+    color: $muted-text
+  li
+    font-size: 22px
+
+
+/*------------------------*/
+//      After the post
+/*------------------------*/
+
+.blogItem-mainSociables
+  border-top: 3px solid $ocean
+  margin: 20px 10px 20px auto
+  padding: 5px 5px 0px 0px
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    text-align: right
+
+.blogItem-mainSociable
+  display: inline-block
+  text-decoration: none
+  color: $muted-text
+  margin-left: 10px
+  transition: all .3s
+  &:hover
+    color: $ocean
+  &:active, &:visited
+    color: $muted-text
+  li
+    font-size: 22px

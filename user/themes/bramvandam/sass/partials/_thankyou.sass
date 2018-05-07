@@ -1,0 +1,102 @@
+.ContactThankyou-title
+  position: relative
+  text-align: center
+  margin-bottom: 20px
+  margin-left: auto
+  margin-right: auto
+  margin-top: 60px
+  width: 200px
+  border-bottom: 3px solid $ocean
+
+  &::after
+    content: ""
+    position: relative
+    margin: 0
+    padding: 0
+    width: 200px
+    height: 3px
+    background: $ocean
+    border-bottom: 3px solid $ocean
+
+.ContactThankyou-text
+  padding: 20px
+  margin-bottom: -10px
+
+.ContactThankyou-wrapper
+  margin-bottom: 50px
+
+
+.ContactForm-thankyou
+  text-align: center
+
+.ContactThankyou-entryField
+  position: relative
+  display: inline-block
+  background: $background-light
+  text-align: left
+  padding: 20px 20px 10px 20px
+  margin: 5px
+  border-radius: 2px 2px
+  width: 95%
+
+  &:nth-child(1)
+    padding-top: 30px
+
+  &:nth-child(4)
+    display: none
+  &:nth-child(5)
+    display: none
+
+.ContactThankyou-entryLabel
+  color: $muted-text2
+  position: absolute
+  right: 20px
+  top: 15px
+  font-family: 'Source Sans Pro'
+  font-style: italic
+
+.ContactThankyou-entryValue
+  font-style: italic
+
+.ContactThankyou-backText
+  border-top: 1px solid $flat-grey
+  margin-top: 50px
+  margin-bottom: 0px
+  padding: 50px 20px 20px 20px
+
+.ContactThankyou-buttons
+  display: flex
+  justify-content: center
+  margin: 20px 20px 20px 0px
+
+  a
+    display: inline-block
+    margin: 0px 10px
+
+@media (max-width: 767px)
+  .ContactThankyou-entryField
+    width: 100%
+
+    &:nth-child(2)
+      width: 100%
+      float: none
+
+    &:nth-child(3)
+      width: 100%
+      float: none
+
+
+@media (max-width: 575px)
+
+  .ContactThankyou-buttons
+    display: inline-block
+    margin: 15px auto 50px auto
+    text-align: center
+
+
+    a
+      margin: 10px 0px
+      width: 100%
+
+    .button-outlineBackground
+      transform: translateY(3px)

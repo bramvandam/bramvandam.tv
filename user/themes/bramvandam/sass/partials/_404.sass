@@ -1,0 +1,76 @@
+.mainError
+  position: absolute
+  top: 0
+  bottom: -1px
+  right: 0
+  left: 0
+  background: url(../images/404.jpg) center bottom
+  background-size: cover
+
+.mainError-overlay
+  position: relative
+  height: 100%
+  width: 100%
+  background: rgba(0,0,0,.1)
+
+.mainError-content
+  position: relative
+  margin: -350px auto
+  text-align: center
+  max-width: 50%
+  color: white
+  padding: 75px 50px
+  background-color: rgba(0,0,0,.3)
+
+  h1
+    display: inline-block
+    font:
+      size: 72px
+    border-bottom: 4px solid $ocean
+
+  h2
+    margin-top: 25px
+    font:
+      family: 'Merriweather', serif
+      size: 24px
+  p
+    margin:
+      top: 35px
+      bottom: 45px
+    font-weight: 400
+  a
+    color: white
+    border-bottom: 2px solid $ocean
+    text-decoration: none
+    transition: all .3s ease-in-out
+
+    &:hover
+      border-bottom: 2px solid $ocean-dark
+
+  .button-chevron-left
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(35,35,35,0.8)
+
+
+    .ion-chevron-left
+      color: $ocean
+
+
+@media (max-width: 767px)
+  .mainError
+    margin-top: -170px
+    position: relative
+    height: 100vh
+    width: 100%
+
+  .mainError-content
+    max-width: 98%
+
+    margin: 170px auto 300px
+    padding: 25px
+
+    p
+      margin-bottom: 60px

@@ -1,0 +1,55 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<section class="ContactThankyou-wrapper">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <div class="ContactThankyou-content">
+            <div class="ContactThankyou-title">
+                <h3>{{ page.header.title }}</h3>
+            </div>
+            {{ content }}
+            <div class="ContactThankyou-text">
+            <p>{{ form.message }}</p>
+            <p>Dit is wat je mij geschreven hebt:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <div class="ContactThankyou-Message clearfix">
+            {% include "forms/data.html.twig" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <div class="ContactThankyou-backText">
+            <p>Kopje koffie nog niet op? Nieuwsgierig naar wat ik tot nu toe gemaakt heb? Neem een kijkje in mijn portfolio of ga direct terug naar home.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <div class="ContactThankyou-buttons">
+            <a class="button-outline" href="/home">
+              <span class="button-outlineText">terug naar Home</span>
+              <button class="button-outlineBackground"></button>
+            </a>
+            <a class="button-outline" href="/werk">
+              <span class="button-outlineText">Bekijk portfolio</span>
+              <button class="button-outlineBackground"></button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+{% endblock %}
