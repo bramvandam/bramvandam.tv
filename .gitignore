@@ -1,0 +1,10 @@
+.DS_Store
+config.codekit3
+CHANGELOG.MD
+CODE_OF_CONDUCT.md
+
+cache/
+bin/
+backup/
+logs/
+tmp/
