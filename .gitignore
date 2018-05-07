@@ -1,23 +1,26 @@
+assets/
+bin/
+backup/
+cache/
+logs/
+system/
+tmp/
+images/
+vendor/
+webserver-configs/
+
+
 .DS_Store
-config.codekit3
 CHANGELOG.MD
 CODE_OF_CONDUCT.md
-CONTRIBUTING.MD
-index.php
-LICENSE.txt
-robots.txt
-
 
 composer.json
 composer.lock
 
+config.codekit3
 
-cache/
-bin/
-backup/
-logs/
-tmp/
-images/
-system/
-vendor/
-webserver-configs/
+CONTRIBUTING.md
+
+index.php
+LICENSE.txt
+robots.txt

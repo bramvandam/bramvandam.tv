@@ -9,11 +9,18 @@
 	],
 "creatorBuild": "26680",
 "files": {
-	"\/.htaccess": {
+	"\/.gitattributes": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.htaccess",
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
+	"\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
 		"oF": 0
 		},
 	"\/assets\/.gitkeep": {
@@ -28545,7 +28552,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 505571582,
-	"displayValue": "Bram van Dam",
+	"displayValue": "bramvandam.tv",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-karate",
 	"iconImageWasSetByUser": 0
