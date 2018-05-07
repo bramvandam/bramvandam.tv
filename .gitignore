@@ -2,9 +2,22 @@
 config.codekit3
 CHANGELOG.MD
 CODE_OF_CONDUCT.md
+CONTRIBUTING.MD
+index.php
+LICENSE.txt
+robots.txt
+
+
+composer.json
+composer.lock
+
 
 cache/
 bin/
 backup/
 logs/
 tmp/
+images/
+system/
+vendor/
+webserver-configs/
